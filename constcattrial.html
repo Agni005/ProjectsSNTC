@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link rel="icon" type="image/png" href="./Amogus.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Cedarville+Cursive&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=VT323&display=swap" rel="stylesheet">
+    <title>Constellation Catalogue Trial</title>
+    <style>
+        body, html{
+            background: radial-gradient(ellipse at center, rgb(7, 7, 35) 5%, black 100%);
+            padding-bottom: 100px;;
+        }
+        .star{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            height: 3px;
+            width: 3px;
+            background: white;
+            border-radius: 10px;
+
+            animation: twinkle 2s infinite ease-in-out;
+        }
+
+        @keyframes twinkle{
+            0%, 100%{
+                opacity: 0.3;
+                transform: scale(1);
+            }
+            50%{
+                opacity: 1;
+                transform: scale(1.5);
+            }
+        }
+        .linee{
+            /* height: 100vh; */
+            /* width: 1px; */
+            /* color: white; */
+            /* background-color: white; */
+            position: absolute;
+            left: 50%;
+            border: 1px solid white;
+            overflow: visible;
+            /* display: none; */
+        }
+        .cc{
+            height: 350px;
+            width: 600px;
+            border: 1px solid white;
+            position: absolute;
+            /* top: 10%; */
+            right: 40%;
+            
+            display: none;
+            margin-bottom: 20px;;
+        }
+        .c{
+            height: 350px;
+            width: 600px;
+            border: 1px solid white;
+            position: absolute;
+            /* top: 5%; */
+            left: 55%;
+           display: none;
+           
+            
+        }
+        @keyframes slidec{
+           0% { width: 0; }
+            100% { width: 600px; }
+        }
+
+        .animc{
+            animation: slidec 2s forwards ease-in-out;
+            
+        }
+        #hey{
+            box-sizing: border-box;
+            display: flex;
+            padding: 40px;
+            border: 1px solid white;
+            color: white;
+            height: 300px;
+            font-family: "Aboreto", system-ui;
+            font-size: 30px;
+            justify-content: center;
+            cursor: pointer;
+            
+        }
+        #txt{
+            box-sizing: border-box;
+            position: absolute;
+            top: 7%;
+            left: 37%;
+            width: 300px;
+            /* padding-left: 20px; */
+            /* text-align:justify;
+             */
+             text-align: center;
+            
+        }
+        
+        .txtcont{
+            box-sizing: border-box;
+            color: white;
+            font-family: "Aboreto", system-ui;
+            text-align: center;
+            transform: opacity 2s ease-in;
+            padding-top: 100px;
+            padding-right: 20px;
+            padding-left: 20px;
+            width: 600px;
+        }
+        @keyframes forp{
+            0%{
+                opacity: 0;
+            }
+            50%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+
+        .appear{
+            animation: forp 4s forwards;
+        }
+        i{
+            position: absolute;
+            border: 1px solid white;
+            color: white;
+            top: 100px;
+            left: 100px;
+        }
+    </style>
+   
+
+</head>
+<body>
+    <!-- <div id="line" class="linee">
+        <!-- <div id="c1" class="c"></div>
+        <div id="c11" class="cc"></div> -->
+    <!-- </div> --> -->
+    <div id="hey">
+        <p id="txt">Click on this box to view the constellation Catalogue of five important constellations </p>
+        
+    </div>
+   
+
+    
+    <script>
+        function randomgen(min, max){
+            return Math.floor(Math.random()*(max-min+1))+min;
+        }
+
+        function createStar(){
+            const star=document.createElement('div');
+            star.classList.add('star');
+
+            star.style.top=`${randomgen(0, window.innerHeight)}px`;
+            star.style.left=`${randomgen(0, window.innerWidth)}px`
+
+            //randomising positions
+            const delay=randomgen(0,5);
+            star.style.animationDelay=`${delay}s`;
+
+            document.body.appendChild(star);
+
+        }
+
+        for(i=1; i<101; i++){
+            createStar();
+        }
+        
+        // const div=document.getElementById('c1');
+        // const div2=document.getElementById('c11');
+        // function anim(){
+        //     div.style.display='block';
+        //     div2.style.display='block';
+        //     div.classList.add('animc');
+        //     div2.classList.add('animc');
+            
+        // }
+
+        const but=document.getElementById('hey');
+        const captions=["Main Stars: Betelgeuse, Rigel Notable Features: Known as 'The Hunter',Orion is one of the most recognizable constellations in the night sky. It contains the Orion Nebula (M42), a stellar nursery, and is located along the celestial equator. Orion is visible in both the Northern and Southern Hemispheres during winter months", 
+        "Main Stars: Dubhe, Merak, Alkaid\n Notable Features: Famous for the 'Big Dipper' asterism, Ursa Major is one of the largest and most well-known constellations in the Northern Hemisphere. It is crucial for navigation, as the Big Dipper points to Polaris, the North Star.",
+        "Main Stars: Schedar, Caph, Ruchbah Notable Features: Easily identifiable by its 'W' shape, Cassiopeia is a prominent northern constellation. It lies opposite the Big Dipper and is often used for celestial navigation. The stars form part of the Milky Way and host several deep-sky objects.", 
+        "Main Stars: Antares, Shaula, Lesath \nNotable Features: Resembling a scorpion, Scorpius is rich with bright stars and nebulae. Antares, a red supergiant, marks the heart of the scorpion. Located in the Southern Hemisphere, Scorpius is best visible during the summer months.", 
+        "Main Stars: Deneb, Albireo\n Notable Features: Often called 'The Swan', Cygnus is located along the Milky Way and contains Deneb, one of the brightest stars in the night sky. Cygnus is part of the Summer Triangle and hosts several interesting deep-sky objects like the Cygnus Loop supernova remnant."];
+
+        
+
+        // createblocksc();
+        let a=0;
+        let x2=630;
+        let y2=50;
+        function createblockscc(){
+            y2+=455;
+            
+                
+                const blockc=document.createElement('div');
+                blockc.style.position='absolute';
+                blockc.style.top=`${y2}px`;
+                blockc.style.right=`${x2}px`;
+                blockc.classList.add('cc', 'animc');
+                blockc.style.display='block';
+                
+                
+                //adding caption
+                const p=document.createElement('p');
+                p.textContent=captions[a];
+                p.classList.add('txtcont', 'appear', 'animc');
+                a++;
+                
+               
+
+                document.body.appendChild(blockc);
+                blockc.appendChild(p);
+        }
+        
+        //creating images
+        const imgarray=['https://starregistration.net/media/wysiwyg/Constellations/Orion.png','https://starregistration.net/media/wysiwyg/Constellations/Ursa_major.png','https://starregistration.net/media/wysiwyg/Constellations/Cassiopeia.png','https://starregistration.net/media/wysiwyg/Constellations/Scorpius.png','https://starregistration.net/media/wysiwyg/Constellations/Cygnus.png'];
+
+
+        function combined(){
+            function createblocksc(){
+            let y=0;
+            let x=635;
+            for(let i=0; i<5; i++){
+                y+=455;
+                
+                const blockc=document.createElement('div');
+                blockc.style.position='absolute';
+                blockc.style.top=`${y}px`;
+                blockc.style.left=`${x}px`;
+                blockc.classList.add('c', 'hidden');
+                blockc.style.display='block';
+                blockc.classList.add('animc');
+                
+
+                //appending image
+                const img=document.createElement('img');
+                img.src=imgarray[i];
+                img.style.width='100%';
+                img.style.height='100%';
+                img.style.objectFit='cover';
+                blockc.appendChild(img);
+                document.body.appendChild(blockc);
+            }
+        }
+            for(let i=0; i<5; i++){
+            createblockscc();
+            }
+            createblocksc();
+        }
+
+        but.addEventListener("click", combined);
+    </script>
+</body>
+</html>

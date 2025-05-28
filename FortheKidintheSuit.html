@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For the Kid in the Suit</title>
+    <link rel="icon" type="image/png" href="./Amogus.jpg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Cedarville+Cursive&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=VT323&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            background: radial-gradient(ellipse at center, rgb(3, 3, 50) 0%, black 100%);
+            overflow: hidden;
+        }
+        .star{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 3px;
+            width: 3px;
+            background: white;
+            border-radius: 10px;
+
+            animation: twinkle 2s infinite ease-in-out;
+        }
+
+        @keyframes twinkle{
+            0%, 100%{
+                opacity: 0.3;
+                transform: scale(1);
+            }
+            50%{
+                opacity: 1;
+                transform: scale(1.5);
+            }
+        }
+
+        #txt{
+            position: absolute;
+            color: white;
+            font-family: "Aboreto", system-ui;
+            font-size: 40px;
+            left: 10%;
+            width: 160px;
+            top: 9%;
+            /* border: 1px solid white; */
+            animation: slidein 3s 1 forwards;
+        }
+
+        @keyframes slidein{
+            0%{
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            100%{
+                opacity: 1;
+                transform: translateX(0%) ;
+            }
+        }
+        #starbox{
+            height: 300px;
+            width: 500px;
+            position: absolute;
+            top: 22%;
+            left: 50%;
+            border: 1px solid white;
+            background-color: rgba(180, 180, 180, 0.311);
+            border-radius: 10px;;
+        }
+        #line{
+            height: 370px;
+            border: 1px solid white;
+            width: 0px;
+            position: absolute;
+            left: 34%;
+            top: 15%;
+
+    }
+    .inp{
+        height: 40px;
+        border-radius: 10px;
+        border: none;
+        width: 400px;
+        background-color: rgb(190, 193, 191);
+        color: black;
+        padding: 10px;
+        font-size: 18px;;
+    }
+    #inp1{
+        position: absolute;
+        top: 25%;
+        left: 8%;
+        font-family: "Aboreto", system-ui;
+        
+    }
+    .but{
+        height: 40px;
+        width: 400px;
+        padding: 10px;
+        cursor: pointer;
+        background-color: rgb(3, 3, 50);
+        color: white;
+        font-size: 15px;
+    }
+    #submit{
+        text-decoration: none;
+        position: absolute;
+        top: 60%;
+        left: 10%;
+        border-radius: 10px;
+        border: none;
+        font-family: "Aboreto", system-ui;
+
+    }
+    .constcap{
+        position: absolute;
+        color: white;
+        width: 300px;
+        font-family: "Aboreto", system-ui;
+        top: 50%;
+        left: 58%;
+        display: none;
+        text-align: center;
+    }
+    @keyframes slideup{
+        0%{
+            transform: translateY(0%);
+        }
+        100%{
+            transform: translateY(-50%);
+        }
+    }
+    .animate{
+        animation: slideup 2s forwards;
+    }
+
+    .comet{
+            background-color: white;
+            height: 9px;
+            width: 5px;
+            border-radius: 10px;
+            /* border: 1px solid white; */
+            position: absolute;
+            top: 50%;
+            left: 49%;
+            color: rgba(255, 255, 255, 0.692);
+            /* animation: draw 4s infinite; */
+            }
+
+            @keyframes comett{
+                0%{
+                    opacity: 1;
+                }
+                100%{
+                    opacity: 0.1;
+                }
+            }
+
+            .animate1{
+                animation: comett 5s forwards;
+            }
+
+            /* .see{
+                height: 300px;
+                width: 200px;
+                border: 1px solid white;
+                position: absolute;
+                top: 22%;
+                left: 50%;
+                display: none;
+                overflow: hidden;
+            } */
+
+            @keyframes rot{
+                 0%{
+                    transform: rotate(0deg);
+                }
+                90%{
+                    transform: rotate(-10deg);
+                }
+                100%{
+                    transform: rotate(-5deg);
+                }
+            }
+
+            .anim{
+                 animation: rot 2s forwards;
+            }
+            @keyframes open{
+                0%{
+                    transform: translateX(0);
+                }
+                100%{
+                    transform: translateX(-200px);
+                }
+            }
+            .anum{
+                animation: open 3s forwards;
+            }
+            #showme{
+                position: absolute;
+                top:80% ;
+                left: 54%;
+                border-radius: 10px;
+                border: none;
+                font-family: "Aboreto", system-ui;
+                display:none;
+            }
+
+            #navi{
+                display: flex;
+                position: absolute;
+                color: white;
+                font-family: "Aboreto", system-ui;
+                width: 1260px;
+                top: 20px;
+                border: 1px solid white;
+                /* left: 200px; */
+                padding: 6px;
+                justify-content: center;
+                border-radius: 20px;
+                            }
+            span{
+                padding: 10px;
+                margin-right: 6px;
+                border-radius: 20px;
+            }
+
+            span:hover{
+                background-color: rgb(43, 44, 45);
+                cursor: pointer;
+            }
+
+            #cred{
+                position: absolute;
+                top: 90%;
+                left: 33%;
+                border: none;
+                background-color: none;;
+                color: white;
+                font-family: "Aboreto", system-ui;
+            }
+
+    </style>
+</head>
+<body>
+    <div id="navi">
+        <span onclick="window.location.href='https://stellarium-web.org/'"> Go to Stellarium</span>
+        <span onclick="window.location.href='\constcattrial.html'"> View Constellation Catalogue</span>
+        <span onclick="window.location.href='https://en.wikipedia.org/wiki/Constellation'"> Go to Wikipedia</span>
+    </div>
+    <div id="welcome">
+        <p id="txt">
+            Hi Agni, here to prepare for Messier Marathon?
+        </p></div>
+    </div>
+    <div id="line"></div>
+    </div>
+    <div id="starbox">
+        <input type="text" placeholder="Enter constellation" id="inp1" class="inp">
+        <button id="submit" class="but">Tell me how to locate this </button>
+    </div>
+
+    <div id="imge" class="see">
+        
+    </div>
+
+    <div class="constcap" id="constcapmsg">
+        
+    </div>
+    
+    <button id="showme" class="but" onclick="window.location.href='/KidintheSuitpage2.html'">See image</button>
+
+    <div class="c" id="cred">Locate any of the 88 IAU Recognized Constellations</div>
+    <script>
+         // const tellme=document.getElementById('submit');
+        // const constcap=document.getElementsByClassName('constcap');
+        // function getinfo(){
+        //     if(constcap[0].style.display===""){
+        //         constcap[0].style.display='block';
+        //         tellme.style.display='none';
+        //     }
+            
+        // }
+
+        //creating stars
+        function randomgen(min, max){
+            return Math.floor(Math.random()*(max-min+1))+min;
+        }
+
+        function createStar(){
+            const star=document.createElement('div');
+            star.classList.add('star');
+
+            star.style.top=`${randomgen(0, window.innerHeight)}px`;
+            star.style.left=`${randomgen(0, window.innerWidth)}px`
+
+            //randomising positions
+            const delay=randomgen(0,5);
+            star.style.animationDelay=`${delay}s`;
+
+            document.body.appendChild(star);
+
+        }
+
+        for(i=1; i<101; i++){
+            createStar();
+        }
+
+        const inputblock=document.getElementById('inp1');
+        const tellme=document.getElementById('submit');
+        const constcapmsg=document.getElementById('constcapmsg');
+        const constcap={
+            
+  andromeda: "Look for a long, curvy line of stars connected to Pegasus—it’s Andromeda, especially clear in fall.",
+  antlia: "A faint group—best seen from the Southern Hemisphere with a telescope.",
+  apus: "Look low in the southern sky if you're near the equator—this little bird is hard to spot without a dark sky.",
+  aquarius: "Big but faint—look for a zigzag pattern above the bright star Fomalhaut in fall.",
+  aquila: "Easy! Look for the bright star Altair in the Summer Triangle—Aquila spreads out from there.",
+  ara: "Near Scorpius in the southern sky—visible from southern latitudes in winter.",
+  aries: "Two medium-bright stars in a line northeast of Pisces—clear in autumn skies.",
+  auriga: "Find the bright star Capella in winter—it’s part of a big pentagon-shaped constellation.",
+  bootes: "Look for Arcturus, a bright orange star, and follow a kite-shaped pattern up from there.",
+  caelum: "Hard to see—very faint and low in southern skies in January.",
+  camelopardalis: "Above Cassiopeia and Ursa Major—a very faint group of stars, best seen from dark northern skies.",
+  cancer: "Between Gemini and Leo, it's faint—look for a small, upside-down Y in spring.",
+  canes_venatici: "Two stars trailing behind the handle of the Big Dipper—they're the hunting dogs!",
+  canis_major: "Follow Orion’s belt down to Sirius—the brightest star in the night sky.",
+  canis_minor: "Just two stars—look between Orion and Procyon in winter.",
+  capricornus: "Looks like a squashed triangle—low in the southern sky in late summer.",
+  carina: "Part of the massive old Argo Navis—contains Canopus, the second-brightest star, visible from the south.",
+  cassiopeia: "Look for the W or M shape in the north—it circles the North Star.",
+  centaurus: "Look in the southern sky—home to Alpha Centauri, one of the closest stars to us!",
+  cepheus: "Near Cassiopeia, shaped like a house—visible all year from the Northern Hemisphere.",
+  cetus: "A big sea monster below Pisces and Aries—look for a scattered shape in fall.",
+  chamaeleon: "Tucked near the south celestial pole—needs southern skies and patience.",
+  circinus: "A faint circle near the Southern Cross—telescope helps here.",
+  columba: "A small dove just south of Canis Major—visible in southern skies in winter.",
+  coma_berenices: "A fuzzy group near Leo—it’s a beautiful star cluster in spring skies.",
+  corona_australis: "A subtle curve near Sagittarius—low in the southern summer sky.",
+  corona_borealis: "A tidy semicircle of stars near Boötes—easy to find in spring and summer.",
+  corvus: "A neat trapezoid near Virgo—looks like a small kite in the spring.",
+  crater: "Next to Corvus—harder to spot but shaped like a cup.",
+  crux: "The Southern Cross—very famous! Easily visible from the Southern Hemisphere.",
+  cygnus: "A cross or swan flying along the Milky Way—Deneb is its tail in the Summer Triangle.",
+  delphinus: "Tiny and cute—looks like a kite near Aquila in summer.",
+  dorado: "Look south in summer—contains part of the Large Magellanic Cloud!",
+  draco: "A long, winding dragon near the Little Dipper—visible year-round in the north.",
+  equuleus: "The Little Horse—one of the smallest constellations, near Pegasus in fall.",
+  eridanus: "A long river of stars starting near Orion and flowing south.",
+  fornax: "A faint furnace in the southern sky—visible in January with a telescope.",
+  gemini: "Look for the twin bright stars Castor and Pollux in winter next to Orion.",
+  grus: "The Crane—look in the southern sky near Piscis Austrinus in late summer.",
+  hercules: "Find the Keystone shape near Vega in summer—it marks Hercules’ body.",
+  horologium: "A faint clock below Eridanus—southern sky, winter months.",
+  hydra: "The longest constellation—starts under Cancer and snakes across the southern sky.",
+  hydrus: "Tiny water snake near the south celestial pole—not to be confused with Hydra!",
+  indus: "A faint figure in the southern sky—visible in August from the south.",
+  lacerta: "A zigzag line in between Cygnus and Andromeda—pretty dim.",
+  leo: "Looks like a backwards question mark with a triangle—very clear in spring.",
+  leo_minor: "A small triangle above Leo—dim and often skipped.",
+  lepus: "A bunny beneath Orion—easy to miss but visible in winter.",
+  libra: "Two stars form the scales—found next to Scorpius in the summer sky.",
+  lupus: "Just to the left of Scorpius—look for a jumble of stars in the southern sky.",
+  lynx: "Long, faint line of stars above Cancer—needs dark skies to trace.",
+  lyra: "Small but bright—find Vega and a little parallelogram nearby.",
+  mensa: "Home to the Large Magellanic Cloud—super southern and super faint.",
+  microscopium: "Tiny and dim—visible in southern skies in late summer.",
+  monoceros: "The Unicorn—hidden between Orion and Canis Major, faint but magical.",
+  musca: "Little fly beneath Crux—compact and visible from the south.",
+  norma: "Near Scorpius—another southern-sky faint group.",
+  octans: "Contains the south celestial pole—no bright stars, but important for navigation!",
+  ophiuchus: "The 13th zodiac sign—big and above Scorpius in summer.",
+  orion: "The easiest one! Look for the belt of three stars—visible in winter.",
+  pavop: "The Peacock—southern sky, bright star Alpha Pavonis leads the way.",
+  pegasus: "Look for the Great Square high in the sky in fall.",
+  perseus: "Above Taurus and below Cassiopeia—contains the Perseid meteor shower’s radiant.",
+  phoenix: "Bright triangle in southern skies—rises in early spring.",
+  pictor: "Near Canopus—tiny, dim, and southern.",
+  pisces: "Faint fish—look for two V shapes connected by a line, visible in fall.",
+  piscis_austrinus: "Contains bright star Fomalhaut—easy to find in late summer.",
+  puppis: "Part of the old Argo ship—look next to Canis Major in southern sky.",
+  pyxis: "The compass of the ship Argo—small and dim but nicely placed south of Hydra.",
+  reticulum: "Telescope-shaped group near Dorado—southern and faint.",
+  sagitta: "The Arrow—tiny constellation between Vulpecula and Aquila.",
+  sagittarius: "The Teapot! Found near the center of the Milky Way in summer.",
+  scorpius: "One of the most beautiful—curved tail and red star Antares make it pop in summer.",
+  sculptor: "Below Cetus—pretty faint, needs dark southern skies.",
+  scorpius: "Follow the bright red star Antares—it’s the heart of the scorpion.",
+  scutum: "A tiny shield along the Milky Way—near Aquila in summer.",
+  serpens: "Split in two—Serpens Caput and Serpens Cauda on either side of Ophiuchus.",
+  sextans: "Dim, small, and south of Leo—spring constellation.",
+  taurus: "Look for the V-shaped Hyades cluster and bright Aldebaran—visible in winter.",
+  telescopium: "A faint group below Sagittarius—southern sky required.",
+  triangulum: "A small triangle near Andromeda—visible in fall.",
+  triangulum_australe: "A neat triangle in the southern sky—bright and compact.",
+  tucana: "Contains part of the Small Magellanic Cloud—southern only.",
+  ursa_major: "The Big Dipper is part of it—visible all year in the north.",
+  ursa_minor: "The Little Dipper—home to Polaris, the North Star!",
+  vela: "Sails of Argo—next to Puppis and Carina in the southern sky.",
+  virgo: "Find Spica, a bright bluish star—Virgo stretches out from there in spring.",
+  volans: "Flying fish near Carina—southern, faint, and best with binoculars.",
+  vulpecula: "The Little Fox—between Cygnus and Sagitta, faint but cute!"
+
+        };
+
+        // for(let i=0; i<88; i++){
+        //     const caption=document.createElement('div');
+        //     caption.classList.add('constcap');
+        //     body.appendChild(caption);
+            
+        // }
+        const showme=document.getElementById('showme');
+        
+        // const stella=["orion", "leo", "aquila", "cygnus"];
+
+        //for making the image box peek
+        const imgbox=document.getElementById('imge');
+         function peek(){
+            
+            imgbox.classList.add('anim');
+        }
+        function open(){
+            imgbox.style.display='block';
+            imgbox.classList.add('anum');
+        }
+        imgbox.addEventListener("mouseover", peek);
+        imgbox.addEventListener("click", open);
+        
+        //for changing info in the box
+         function getinfo(event){
+
+            if(event.key==='Enter' || event.type==="click"){
+            //showme.style.display='block';
+            imgbox.style.display='block';
+
+            function slideup(){
+            inputblock.classList.add('animate');
+            }
+            slideup();
+            const value=document.getElementById('inp1').value.toLowerCase();
+
+            // for (let i = 0; i < constcap.length; i++) {
+            //     constcap[i].style.display = 'none';
+            // }
+            if(constcap[value]){
+                constcapmsg.textContent=constcap[value];
+                constcapmsg.style.display = 'block';
+                tellme.style.display='none';
+                
+            }
+            else{
+                constcapmsg.textContent="Are you sure that's a constellation?";
+                constcapmsg.style.display = 'block';
+                tellme.style.display='none';
+                
+            }
+            }
+              
+        }
+
+        tellme.addEventListener("click", getinfo);
+        inputblock.addEventListener("keydown", getinfo);
+        
+        //creating a comet
+         const com=document.createElement('div');
+        com.classList.add('comet');
+        document.body.appendChild(com);
+
+        let x=0;
+        let y=0;
+
+        function fly(){
+             com.classList.add('animate1');
+            x+=3;
+            y+=5;
+
+            com.style.left=`${x}px`;
+            com.style.top=`${y}px`;
+
+            if (x < window.innerWidth && y < window.innerHeight) {
+            requestAnimationFrame(fly);
+            
+            } else {
+                com.remove(); 
+            }
+
+        }
+
+        fly();
+
+        
+
+    </script>
+    
+    <div class="star"></div>
+</body>
+</html>

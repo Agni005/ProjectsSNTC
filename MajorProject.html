@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100..900&family=Oswald:wght@200..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body{
+            /* animation: bgswap 3s infinite; */
+            background-color: black;
+            background-image: url(https://images.pexels.com/photos/1846608/pexels-photo-1846608.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+            background-size: cover;
+            height: 100vh; 
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+
+        }
+        #mainCont{
+            text-align: center;
+            color: white;
+            font-family: "Josefin Sans", serif;
+            font-optical-sizing: auto;
+            font-weight: 200;
+            font-style: normal;
+            height: 300px;
+            width: 440px;
+            background-color: rgba(116, 156, 135, 0.539);
+            position: absolute;
+            top: 125px;
+            border-radius: 20px;
+            /* padding: 50px 20px; */
+            padding-top: 20px;
+            padding-bottom: 80px;
+            
+        }
+        /* #globevid{
+            height: 500px;
+            width: 500px;
+            border-radius: 250px;
+            padding: 1px 1px;
+            margin-left: 810px;
+            position: absolute;
+            top: 76px;
+            /* border: 1px solid grey; */
+            
+        /* } */ 
+        header{
+            text-shadow: 1px -1px  black ;
+            position: absolute;
+            font-family: "Lato", serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 40px;
+            color: white;
+            text-align: center;
+            border: 1px solid transparent;
+            width: 100%;
+            padding: 20px;
+            border: 1px solid gray;
+        }
+        @keyframes bgswap{
+            from{background-color: rgb(129, 189, 230);}
+            to{background-color: rgb(140, 235, 242);}
+            
+        }
+        span{
+            padding: 15px 20px;
+            margin-top: 20px;
+            margin-bottom: 0px;
+
+        }
+        span:hover{
+            background-color: rgba(120, 226, 108, 0.559);
+            border-radius:100px ;
+        }
+        /* @keyframes myanim{
+            from{transform: translateX(2%);}
+            to{transform: translateX(108%);}
+            
+        } */
+        @keyframes myanim {
+            from { 
+                transform: translateX(2%);
+                opacity: 0;  /* Start hidden */
+            }
+            20%{
+                opacity: 0;
+            }
+            50%{
+                opacity: 0.5;
+            }
+            90% { 
+                opacity: 1;  /* Stay hidden until the end */
+            }
+            to { 
+                transform: translateX(100%);
+                opacity: 1;  /* Show text at final position */
+    }
+    }
+
+
+        #day1, #day2,#day3,#day4,#day5,#day6,#day7{
+            border: 1px solid grey;
+            height: 378px;
+            width: 265px;
+            animation-name: myanim;
+            animation-duration: 2s;
+            display:block;
+            border-radius:20;
+            position: absolute;
+            top: 125px;
+            border-radius: 20px;
+            padding:11px 100px;
+            background-color: rgba(153, 202, 234, 0.447);
+            color: white;
+            animation-fill-mode: forwards;
+          
+        }
+        .temps:hover{
+            background-color: rgba(85, 143, 134, 0.779);
+        }
+        /* #a{grid-area: a1;}
+        #b{grid-area: b1;}
+        #c{grid-area: c1;}
+        #d{grid-area: d1;}
+        #e{grid-area: e1;}
+        #f{grid-area: f1;}
+        #g{grid-area: g1;}
+        #h{grid-area: h1;}
+        #i{grid-area: i1;}
+        #j{grid-area: j1;}
+        .day{
+            display: grid;
+            justify-content: center;
+            grid-template-areas: 'a1 b1 c1'
+            'd1 e1 f1'
+            'g1 h1 i1';
+        } */
+        #coverit{
+            /* color: white;
+            text-align: center;
+            font-family: "Josefin Sans", serif;
+            font-optical-sizing: auto;
+            font-weight: 100;
+            font-style: normal;
+            border: 1px solid grey;
+            height: 300px;
+            width: 400px;
+            border-radius:20;
+            position: absolute;
+            top: 80px;
+            border-radius: 20px;
+            padding: 50px 20px; */
+            text-align: center;
+            color: white;
+            font-family: "Josefin Sans", serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-size: 20px;
+            font-style: normal;
+            height: 230px;
+            width: 250px;
+            /* background-color: rgba(212, 141, 201, 0.441); */
+            background-color: rgba(128, 128, 128, 0.596);
+            position: absolute;
+            top: 1px;
+            border-radius: 20px;
+            /* padding: 50px 20px; */
+            padding-top: 170px;
+            padding-left: 3px;
+            padding-right: 3px;
+            left: 963px;
+        }
+        /* #footer{
+            color: white;
+            text-align: center;
+            font-family: "Lato", serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 12px;
+            height: 50px;
+            /* padding: 15px; */
+            /* margin-left: 0px;
+            width: 100px;
+            background-color: rgba(255, 255, 255, 0.333);
+            position: absolute;
+            top: 900px;
+            left: 1px; }*/
+          
+       .temps{
+        display: flex;
+        justify-content: center;
+        margin: 5px;
+        font-family: "Lato", serif;
+        font-weight: 400;
+        font-style: normal;
+        justify-content: center;
+        padding: 2px;
+        border: 1px solid gray;
+        border-radius: 10px;
+       }
+
+        .stats{
+            /* background-color: rgba(135, 247, 158, 0.358); */
+            border: 2px solid gray;
+            margin-top: 26px;
+            margin-left: 9px;
+            border-radius: 14px;
+            width: 420px;
+            height: 250px;
+            padding-top: 15px;
+            opacity: 0; /* Initially hidden */
+            visibility: hidden; /* Make sure it's not clickable or interactive */
+            transition: opacity 1s ease-in-out, visibility 0s linear 1s; 
+       }
+            .stats.visible {
+            opacity: 1; /* Fade in */
+            visibility: visible; /* Make it visible and interactive */
+            transition: opacity 0.3s ease-in-out, visibility 0s linear 0s; /* Make visibility instant */
+        }
+
+        #card4{
+            position: absolute;
+            top: 557px;
+            left: 792px;
+        }
+        #card2{
+            position: absolute;
+            top: 557px;
+            left: 160px;
+        }
+        #card3{
+            position: absolute;
+            top: 557px;
+            left: 475px;
+        }
+        .card{
+            color: white;
+            height: 300px;
+            width: 300px;
+            font-family: "Lato", serif;
+            font-weight: 400;
+            font-style: normal;
+            padding: 2px;
+            /* position: absolute;
+            top: 560px;
+            left: 50px; */
+            /* margin: 20px; */
+            border: 2px solid gray;
+            background-color: rgba(42, 41, 41, 0.68);
+
+        }
+        img{
+            height: 200px;
+            width: 287px;
+        }
+        .card:hover {
+            box-shadow: 0 -1px 3px white; 
+        }
+        .card-text{
+            color: white;
+            text-align: center;
+            font-family: "Lato", serif;
+            font-style: normal;
+        }
+        i{
+
+            position: absolute;
+            top:28px;
+            left: 443px;
+
+        }
+        #blank{
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-family: "Lato", serif;
+            font-style: normal;
+            font-size: 17px;
+            font-weight: 700;
+            height: 100px;
+            width: 100%;
+            padding: 10px 10px; 
+            margin-top: 90px;
+            position: absolute;
+            top: 800px;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.208);
+            
+
+        }
+    
+    </style>
+</head>
+<body>
+   
+    <script>
+        // Array to store the different sets of text for each day
+const statsText = [
+    `<br><br><br>Temperature: 29 degree celsius.
+     <br><br>Wind speed: 8km/hr<br><br>Humidity: 26%`, 
+    `<br><br><br>Temperature: 29 degree celsius.
+     <br><br>Wind speed: 11km/hr<br><br>Humidity: 23%`,
+    `<br><br><br>Temperature: 30 degree celsius.
+     <br><br>Wind speed: 10km/hr<br><br>Humidity: 21%`,
+    `<br><br><br>Temperature: 30 degree celsius.
+     <br><br>Wind speed: 6km/hr<br><br>Humidity: 27%`,
+    `<br><br><br>Temperature: 30 degree celsius.
+     <br><br>Wind speed: 15km/hr<br><br>Humidity: 21%`,
+    `<br><br><br>Temperature: 30 degree celsius.
+     <br><br>Wind speed: 14km/hr<br><br>Humidity: 19%`,
+    `<br><br><br>Temperature: 30 degree celsius.
+     <br><br>Wind speed: 12km/hr<br><br>Humidity: 12%`,
+    `<br><br><br>Temperature: 32 degree celsius.
+     <br><br>Wind speed: 14km/hr<br><br>Humidity: 13%`,
+
+];
+
+
+        function showStats(dayIndex) {
+            var statsDiv = document.querySelector(".stats");
+            statsDiv.innerHTML = statsText[dayIndex];
+            statsDiv.classList.add("visible");  // Trigger the fade-in effect by adding the class
+        }
+
+        function showDiv(dayId, dayIndex) {
+            // Hide all divs first
+            var days = ["day1", "day2", "day3", "day4", "day5", "day6", "day7"];
+            for (var i = 0; i < days.length; i++) {
+                var div = document.getElementById(days[i]);
+                if (div) {
+                    div.style.display = "none";
+                }
+            }
+    
+            // Show the selected div
+            var selectedDiv = document.getElementById(dayId);
+            if (selectedDiv) {
+                selectedDiv.style.display = "block";
+    
+                // Restart the animation
+                selectedDiv.style.animation = "none"; // Reset animation
+                void selectedDiv.offsetWidth;  // Trigger reflow to restart animation
+                selectedDiv.style.animation = "myanim 2s forwards";
+            }
+            setTimeout(() => {
+    selectedDiv.style.transform = "translateX(108%)";  // Lock position
+    selectedDiv.style.opacity = "1";  // Ensure text appears
+}, 2000);  // Matches animation duration
+
+showStats(dayIndex);
+
+        }
+    </script>
+    
+    <header>
+        
+        Weather Bee
+    </header>
+    <i class="fa-solid fa-cloud-sun fa-3x" style="color: #ffffff;"></i>
+    <div id="mainCont">
+        <div id="coverit">
+            Find what the weather has to offer
+            with
+            Weather Bee
+        </div>
+        February 2025<br><br>
+        <span onclick="showDiv('day1', 0)">19</span>
+        <span onclick="showDiv('day2', 1)">20</span>
+        <span onclick="showDiv('day3', 2)">21</span>
+        <span onclick="showDiv('day4', 3)">22</span>
+        <span onclick="showDiv('day5', 5)">23</span>
+        <span onclick="showDiv('day6', 6)">24</span>
+        <span onclick="showDiv('day7', 7)">25</span>
+
+        <div class="stats">
+           
+        </div>
+       
+        
+    </div>
+
+    <!-- <div id="globe">
+        <video autoplay muted id="globevid">
+            <source src="globe.mp4" type="video/mp4">
+        </video>
+    </div> -->
+    <div id="day1" class="day">
+        <div>
+            <div class="temps">1 am: 17 degrees</div>
+            <div class="temps">2 am:18 degrees<br></div>
+            <div class="temps">3 am: 20 degrees<br></div>
+            <div class="temps">4 am: 23 degrees<br></div>
+            <div class="temps"> 5 am: 25 degrees<br></div>
+            <div class="temps">6 am: 27 degrees<br></div>
+            <div class="temps"> 7 am: 28 degrees<br></div>
+            <div class="temps">8 am: 28 degrees<br></div>
+            <div class="temps">9 am: 29 degrees<br></div>
+            <div class="temps">10 am: 28 degrees<br></div>
+            <div class="temps"> 11 am: 28 degrees<br></div>
+            <div class="temps">12 am: 27 degrees<br></div>  
+        
+        </div>
+    </div>
+    <div id="day2" class="day" >  <div class="temps">1 am: 25 degrees</div>
+    <div class="temps">2 am:17 degrees<br></div>
+    <div class="temps">3 am: 18 degrees<br></div>
+    <div class="temps">4 am: 20 degrees<br></div>
+    <div class="temps"> 5 am: 23 degrees<br></div>
+    <div class="temps">6 am: 26 degrees<br></div>
+    <div class="temps"> 7 am: 28 degrees<br></div>
+    <div class="temps">8 am: 29 degrees<br></div>
+    <div class="temps">9 am: 29 degrees<br></div>
+    <div class="temps">10 am: 28 degrees<br></div>
+    <div class="temps"> 11 am: 28 degrees<br></div>
+    <div class="temps">12 am: 25 degrees<br></div></div>
+    <div id="day3" class="day"> <div class="temps">1 am: 25 degrees</div>
+    <div class="temps">2 am:19 degrees<br></div>
+    <div class="temps">3 am: 16 degrees<br></div>
+    <div class="temps">4 am: 16 degrees<br></div>
+    <div class="temps"> 5 am: 17 degrees<br></div>
+    <div class="temps">6 am: 17 degrees<br></div>
+    <div class="temps"> 7 am: 18 degrees<br></div>
+    <div class="temps">8 am: 20 degrees<br></div>
+    <div class="temps">9 am: 23 degrees<br></div>
+    <div class="temps">10 am: 26 degrees<br></div>
+    <div class="temps"> 11 am: 28 degrees<br></div>
+    <div class="temps">12 am: 29 degrees<br></div></div>
+    <div id="day4" class="day"> <div class="temps">1 am: 30 degrees</div>
+    <div class="temps">2 am:18 degrees<br></div>
+    <div class="temps">3 am: 17 degrees<br></div>
+    <div class="temps">4 am: 17 degrees<br></div>
+    <div class="temps"> 5 am: 16 degrees<br></div>
+    <div class="temps">6 am: 17 degrees<br></div>
+    <div class="temps"> 7 am: 18 degrees<br></div>
+    <div class="temps">8 am: 20 degrees<br></div>
+    <div class="temps">9 am: 23 degrees<br></div>
+    <div class="temps">10 am: 26 degrees<br></div>
+    <div class="temps"> 11 am: 28 degrees<br></div>
+    <div class="temps">12 am: 29 degrees<br></div></div>
+    <div id="day5" class="day"> <div class="temps">1 am: 18 degrees</div>
+    <div class="temps">2 am:16 degrees<br></div>
+    <div class="temps">3 am: 16 degrees<br></div>
+    <div class="temps">4 am: 15 degrees<br></div>
+    <div class="temps"> 5 am: 15 degrees<br></div>
+    <div class="temps">6 am: 18 degrees<br></div>
+    <div class="temps"> 7 am: 17 degrees<br></div>
+    <div class="temps">8 am: 18 degrees<br></div>
+    <div class="temps">9 am: 18 degrees<br></div>
+    <div class="temps">10 am: 19 degrees<br></div>
+    <div class="temps"> 11 am: 21 degrees<br></div>
+    <div class="temps">12 am: 18 degrees<br></div></div>
+    <div id="day6" class="day"> <div class="temps">1 am: 17 degrees</div>
+    <div class="temps">2 am:16 degrees<br></div>
+    <div class="temps">3 am: 15 degrees<br></div>
+    <div class="temps">4 am: 15 degrees<br></div>
+    <div class="temps"> 5 am: 15 degrees<br></div>
+    <div class="temps">6 am: 17 degrees<br></div>
+    <div class="temps"> 7 am: 17 degrees<br></div>
+    <div class="temps">8 am: 19 degrees<br></div>
+    <div class="temps">9 am: 22 degrees<br></div>
+    <div class="temps">10 am: 25 degrees<br></div>
+    <div class="temps"> 11 am: 27 degrees<br></div>
+    <div class="temps">12 am: 27 degrees<br></div>
+</div>
+    <div id="day7" class="day"> <div class="temps">1 am: 17 degrees</div>
+    <div class="temps">2 am:17 degrees<br></div>
+    <div class="temps">3 am: 16 degrees<br></div>
+    <div class="temps">4 am: 16 degrees<br></div>
+    <div class="temps"> 5 am: 16 degrees<br></div>
+    <div class="temps">6 am: 15 degrees<br></div>
+    <div class="temps"> 7 am: 17 degrees<br></div>
+    <div class="temps">8 am: 19 degrees<br></div>
+    <div class="temps">9 am: 22 degrees<br></div>
+    <div class="temps">10 am: 25 degrees<br></div>
+    <div class="temps"> 11 am: 27 degrees<br></div>
+    <div class="temps">12 am: 28 degrees<br></div></div>
+
+    <!-- <div class="card" id="card1 "style="width: 18rem;">
+        <img src="/Amogus.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div> -->
+
+      <div class="card" id="card2" style="width: 18rem;">
+        <img src= "/sun.jpg" class="card-img-top" alt="About us">
+        <div class="card-body">
+          <p class="card-text">Maps:
+            <br>
+            <a href="https://zoom.earth/maps/satellite/#view=15.5,78.1,3.86z" style="font-style: normal; text-decoration: none; color: white;"> Click on this to view the current weather in India through the map.</a>
+           
+          </p>
+        </div>
+      </div>
+
+      <div class="card" id="card3" style="width: 18rem;">
+        <img src="/raincloud.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">About us: <br>
+        <a href="aboutus.html" style="font-style: normal; text-decoration: none; color: white;">Click on this to know more about us.</a></p>
+        </div>
+    </div>
+
+        <div class="card" id="card4" style="width: 18rem;">
+            <img src="/thunderbolt.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Satellite Images:<br>
+                <a href="https://www.windy.com/-Temperature-temp?temp,18.390,75.117,4,m:eiKaimu" style="font-style: normal; text-decoration: none; color: white;"> Click to see satellite images of the country.</a>
+           </p>
+            </div>
+
+
+      </div>
+    </div>
+<div id="blank">
+
+     To know more about the current weather, you can visit this website:<br><br>
+     <a href="https://www.bbc.com/weather/1253405" style="text-decoration: none; color: rgb(255, 255, 255);">Click here</a><br><br>
+     MADE BY AGNI JHARIYA
+</div>
+    
+    
+    
+    
+</body>
+</html>
